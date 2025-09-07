@@ -1,0 +1,39 @@
+You need to run this code once a day; you dont need a Kisnaplo acount or any authentication
+
+Here is an example on how to setup the running of this file on a linux vps:
+
+
+- install python
+
+sudo apt update && sudo apt install python3 -y
+
+
+- copy the script
+
+cd birthday-scraper
+cp main.py /opt/birthday_scraper/script.py
+
+
+- set permissions
+
+chmod +x /opt/birthday_scraper/script.py
+
+
+- open crontab
+
+crontab -e
+
+
+- add this line (runs every day at 9:00 AM)
+
+0 9 * * * /usr/bin/python3 /opt/birthday_scraper/script.py >> /opt/birthday_scraper/script.log 2>&1
+
+
+
+done – script will now execute daily
+
+
+The db will be in /opt/birthday_scraper/students.db
+
+
+If your stuck just use chatgpt, paste the whole instructions there
