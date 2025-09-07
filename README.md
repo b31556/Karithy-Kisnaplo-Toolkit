@@ -19,24 +19,24 @@ The **Karithy Kisnapló Toolkit** is a collection of tools designed to interact 
 
 ## 🗂 Table of Contents
 
-- [[#📊 Charts What You Need / Tool Use]]
+- [📊 Charts: What You Need / Tool Use](#-charts-what-you-need--tool-use)
     
-- [[#🛠 Tools]]
+- [🛠 Tools](#-tools)
     
-    - [[#All Timetables]]
+    - [All Timetables](#all-timetables)
         
-    - [[#Birthday Scraper]]
+    - [Birthday Scraper](#birthday-scraper)
     
--  [[#How to Get Your KSNPLID]]
+-  [How to Get Your KSNPLSID](#how-to-get-your-ksnplsid)
 
 ---
 
 ## 📊 Charts: What You Need / Tool Use
 
-| Tool                                                                                            | What You Need           | Output                          | What it does                 |
-| ----------------------------------------------------------------------------------------------- | ----------------------- | ------------------------------- | ---------------------------- |
-| [All Timetables](https://chatgpt.com/c/68bdc2cf-9ff8-832f-bd1b-00e7f69e1559#all-timetables)     | Active Kisnapló account | Excel, JSON, Interactive Viewer | Gets all clases timetables   |
-| [Birthday Scraper](https://chatgpt.com/c/68bdc2cf-9ff8-832f-bd1b-00e7f69e1559#birthday-scraper) | Nothing                 | Sqlite database                 | Gets all students birthdates |
+| Tool                                        | What You Need           | Output                          | What it does                 |
+| ------------------------------------------- | ----------------------- | ------------------------------- | ---------------------------- |
+| [All Timetables](#all-timetables)           | Active Kisnapló account | Excel, JSON, Interactive Viewer | Gets all clases timetables   |
+| [Birthday Scraper](#birthday-scraper)       | Nothing                 | Sqlite database                 | Gets all students birthdates |
 
 ---
 
@@ -44,16 +44,17 @@ The **Karithy Kisnapló Toolkit** is a collection of tools designed to interact 
 
 ### All Timetables
 
-![[Pasted image 20250907223403.png]]
+<img width="822" height="386" alt="image" src="https://github.com/user-attachments/assets/3c8d0f30-1761-4316-8a9a-eefae140e681" />
+
 
 **Description:**  
 Fetches the timetable of **all classes in the school**, including **room numbers** and **teachers**, and exports it to **Excel** and **JSON** formats. Also provides an **interactive timetable viewer** for easy browsing.
 
 **What You Need:**
 
-- An active Kisnapló account (uses **KSNPLID – session ID**)
+- An active Kisnapló account (uses **KSNPLSID – session ID**)
     
-- [Guide on obtaining your KSNPLID](https://chatgpt.com/c/docs/how-to-get-ksnplid.md)
+- [Guide on obtaining your KSNPLSID](#how-to-get-your-ksnplsid)
     
 
 **How to Use:**  
@@ -73,10 +74,10 @@ The code works by exploiting the 'terem csere' room swap page and its contents, 
 
 ### Birthday Scraper
 
-![[Pasted image 20250907223137.png]]
+<img width="602" height="131" alt="image" src="https://github.com/user-attachments/assets/30098394-a3ea-4ca8-835a-26160f70af6c" />
 
 **Description:**  
-Extracts **every student’s birthdate, class, and age** from the Kisnapló system. Note: For complete coverage, the script should be run **continuously or periodically throughout the year**. See [how to run.txt](https://chatgpt.com/c/docs/how-to-run.txt) for more details.
+Extracts **every student’s birthdate, class, and age** from the Kisnapló system. Note: For complete coverage, the script should be run **continuously or periodically throughout the year**. See `how to run.txt` for more details.
 
 **What You Need:**
 
@@ -100,25 +101,26 @@ python main.py
 The code works by expoiting the 'whos birthday is today' functionality, which revels these informations about the student for that one day, doing this scrape daily, with for example a vps you can rebuild the database
 
 
-## How to Get Your KSNPLID
+## How to Get Your KSNPLSID
 
-**What is a KSNPLID?**  
-The **KSNPLID** is a short-lived session ID that allows the toolkit to access restricted data on Kisnapló. Some tools will prompt you to enter it when running.
+**What is a KSNPLSID?**  
+The **KSNPLSID** is a short-lived session ID that allows the toolkit to access restricted data on Kisnapló. Some tools will prompt you to enter it when running.
 
 **How to Obtain It:**
 
 1. Log in to your Kisnapló account.
     
-2. Look at the **end of the URL** in your browser. Your KSNPLID will be there.
+2. Look at the **end of the URL** in your browser. Your KSNPLSID will be there.
 
-	![[Pasted image 20250907223028.png]]
+	<img width="937" height="229" alt="image" src="https://github.com/user-attachments/assets/cc6f25a1-974c-4404-94e3-09e400e77fb3" />
+
 
 **Expiration:**
 
-- The KSNPLID is **temporary**.
+- The KSNPLSID is **temporary**.
     
 - It expires **after a few minutes of inactivity** or roughly **one hour** automatically.
     
-- You will need to obtain a **new KSNPLID periodically** to continue using the toolkit.
+- You will need to obtain a **new KSNPLSID periodically** to continue using the toolkit.
     
 
