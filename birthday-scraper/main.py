@@ -8,7 +8,7 @@ import os
 
 # Config
 URL = "https://kisnaplo.karinthy.hu/app/interface.php"
-DB_PATH = "/opt/birthday_scraper/students.db"
+DB_PATH = "/opt/birthday_scraper/students.db" if os.name != 'nt' else "./students.db"
 
 def fetch_html():
     try:
